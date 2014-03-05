@@ -1,9 +1,10 @@
 AM_CFLAGS  = -Wall
 
-lib_LTLIBRARIES = libedf.la
+lib_LTLIBRARIES = libedflib.la
 
-libedf_la_SOURCES = \
-	edflib.c
+libedflib_la_SOURCES = edflib.c
+
+include_HEADERS = edflib.h
 
 indent: *.c *.h
 	indent -linux $^
